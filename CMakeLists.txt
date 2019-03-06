@@ -29,7 +29,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8.11)
 
 MACRO (SIGN_TARGET target)
   IF (EMBREE_SIGN_FILE)
-    IF (WIN32)
+    IF (WIN32 OR WIN64)
       # on Windows we only strip as debug symbols not included in binary
       ADD_CUSTOM_COMMAND(TARGET ${target} POST_BUILD
         COMMAND ${EMBREE_SIGN_FILE} $<TARGET_FILE:${target}>)
