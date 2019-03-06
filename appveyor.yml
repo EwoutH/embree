@@ -2,7 +2,10 @@ image: Visual Studio 2017
 configuration: Release
 
 install:
-    - cmake . -G "Visual Studio 15 2017 Win64"
+ - appveyor DownloadFile http://sourceforge.net/projects/ispcmirror/files/v1.10.0/ispc-v1.10.0-windows.zip
+ - 7z e ispc-v1.10.0-windows.zip
+ - set PATH=%PATH%;%APPVEYOR_BUILD_FOLDER%\ispc-v1.10.0-windows\ispc-1.10.0-win32\bin
+ - cmake . -G "Visual Studio 15 2017 Win64"
 
 build:
   project: embree.sln
