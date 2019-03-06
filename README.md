@@ -1,7 +1,7 @@
 % Embree: High Performance Ray Tracing Kernels 3.5.1
 % Intel Corporation
 
-Embree Overview
+Embree Overview [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/embree/embree?branch=master&svg=true)](https://ci.appveyor.com/project/embree/embree)
 ===============
 
 Intel® Embree is a collection of high-performance ray tracing kernels,
